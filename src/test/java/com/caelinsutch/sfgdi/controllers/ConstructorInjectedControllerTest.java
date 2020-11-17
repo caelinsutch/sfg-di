@@ -2,9 +2,7 @@ package com.caelinsutch.sfgdi.controllers;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import services.GreetingServiceImpl;
-
-import static org.junit.jupiter.api.Assertions.*;
+import com.caelinsutch.sfgdi.services.GreetingServiceImpl;
 
 class ConstructorInjectedControllerTest {
 

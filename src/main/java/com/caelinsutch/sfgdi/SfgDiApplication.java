@@ -1,7 +1,9 @@
 package com.caelinsutch.sfgdi;
 
+import com.caelinsutch.sfgdi.controllers.ConstructorInjectedController;
 import com.caelinsutch.sfgdi.controllers.MyController;
 import com.caelinsutch.sfgdi.controllers.PropertyInjectedController;
+import com.caelinsutch.sfgdi.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -24,6 +26,12 @@ public class SfgDiApplication {
 
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
         System.out.println(propertyInjectedController.getGreeting());
+
+        SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
+        System.out.println(setterInjectedController.getGreeting());
+
+        ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
+        System.out.println(constructorInjectedController.getGreeting());
     }
 
 }
